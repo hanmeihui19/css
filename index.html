@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .clear:after{
+            content: "";
+            clear: both;
+            display: block;
+            height: 0;
+        }
+
+        .container {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .container div {
+            font-size: 20px;
+            color: white;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            float: left;
+        }
+
+        .container div:nth-child(1) {
+            background-color: lightskyblue;
+        }
+
+        .container div:nth-child(2) {
+            background-color: pink;
+        }
+
+        .container div:nth-child(3) {
+            background-color: lightgreen;
+        }
+
+        .container div:nth-child(4) {
+            background-color: yellow;
+        }
+
+        @media screen and (min-width: 1200px) {
+            .container {
+                width: 1200px;
+            }
+
+            .container div {
+                width: 300px;
+                float: left;
+            }
+        }
+
+        @media screen and (max-width: 1200px) and (min-width: 992px){
+            .container {
+                width: 992px;
+            }
+
+            .container div:nth-child(1) {
+                width: 992px;
+            }
+
+            .container div:nth-child(2) {
+                width: 330.66px;
+            }
+
+            .container div:nth-child(3) {
+                width: 330.66px;
+            }
+
+            .container div:nth-child(4) {
+                width: 330.66px;
+            }
+        }
+
+        @media screen and (max-width: 992px) and (min-width: 768px){
+            .container {
+                width: 768px;
+            }
+
+            .container div:nth-child(1) {
+                width: 384px;
+            }
+
+            .container div:nth-child(2) {
+                width: 384px;
+            }
+
+            .container div:nth-child(3) {
+                width: 384px;
+            }
+
+            .container div:nth-child(4) {
+                width: 384px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 100%;
+            }
+
+            .container div {
+                width: 100%;
+                float: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class = 'container'>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+</body>
+</html>
